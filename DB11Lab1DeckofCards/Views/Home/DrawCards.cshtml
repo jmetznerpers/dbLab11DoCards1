@@ -1,0 +1,21 @@
+﻿@model Deck
+@{
+    ViewData["Title"] = "DrawCards";
+}
+
+<h1>DrawCards</h1>
+
+<div>
+    @foreach (myCards card in Model.cards)
+    {
+        <div>
+            @card.value @card.suit
+
+        </div>
+        <div>
+            <img src="https://deckofcardsapi.com/static/img/@(card.code).png" width="100" />
+        </div>
+    }
+    <div>There are this many cards remaining in the deck: @Model.remaining </div><br />
+    <a asp-action="DrawCards" asp-controller="Home" asp-route-deck_id="@Model.deck_id">Draw 5</a>
+</div>

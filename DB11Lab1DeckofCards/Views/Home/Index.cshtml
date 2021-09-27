@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    Create new deck of cards and shuffle them!
+    <form method="post" action="/Home/GetAndShuffleNewDeck">
+        <input type="submit" value="New Deck!"  />
+    </form>
+</div>

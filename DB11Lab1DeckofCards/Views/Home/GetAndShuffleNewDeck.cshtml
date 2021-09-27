@@ -1,0 +1,16 @@
+﻿@model Deck 
+@{
+    ViewData["Title"] = "GetAndShuffleNewDeck";
+}
+
+<h1>Here is your Deck!</h1>
+<body>
+    <div>We were able to create a new deck: @Model.success </div><br />
+    <div>The deck id is : @Model.deck_id </div><br />
+    <div>The deck has been shuffled: @Model.shuffled </div><br />
+    <div>There are this many cards remaining in the deck: @Model.remaining </div><br />
+    <br />
+    Draw 5 cards!<br />
+    <a asp-action="DrawCards" asp-controller="Home" asp-route-deck_id="@Model.deck_id">Draw 5</a>
+
+</body>
